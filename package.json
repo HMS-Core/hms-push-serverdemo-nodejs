@@ -1,0 +1,25 @@
+{
+    "name": "hcm-admin",
+    "version": "0.0.1",
+    "description": "HCM Node SDK.",
+    "main": "./dist/index.js",
+    "scripts": {
+        "tsc": "tsc -w",
+        "build": "tsc"
+    },
+    "config": {},
+    "author": "guoyu",
+    "license": "ISC",
+    "dependencies": {
+        "request": "^2.88.0",
+        "request-promise": "^4.2.4"
+    },
+    "devDependencies": {
+        "typescript": "3.1.6",
+        "@types/node": "8.10.34",
+        "@types/request": "^2.48.2",
+        "@types/request-promise": "^4.1.44",
+        "@types/mocha": "^5.2.7",
+        "mocha": "5.2.0"
+    }
+}
