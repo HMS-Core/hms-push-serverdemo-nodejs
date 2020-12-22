@@ -92,29 +92,29 @@ The following table lists methods in Topic.
 | unSubScribeTopic | Unsubscribe topic. |
 | queryTopicList | Query subject list. |
 
-### 1 Send an Android data message.
-Code location: examples/send_data_message.js
+#### 1. Send an Android data message.
+Code location: [examples/send_data_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_data_message.js)
 
-### 2 Send an Android notification message.
-Code location: examples/send_notify_message.js
+#### 2. Send an Android notification message.
+Code location: [examples/send_notify_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_notify_message.js)
 
-### 3 Send a message by topic.
-Code location: examples/send_topic_message.js
+#### 3. Send a message by topic.
+Code location: [examples/send_topic_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_topic_message.js)
 	
-### 4 Send a message by conditions.
-Code location: examples/send_condition_message.js
+#### 4. Send a message by conditions.
+Code location: [examples/send_condition_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_condition_message.js)
 
-### 5 Send a message to a Huawei quick app.
-Code location: examples/send_instance_app_message.js
+#### 5. Send a message to a Huawei quick app.
+Code location: [examples/send_instance_app_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_instance_app_message.js)
 
-### 6 Send a message through the WebPush agent.
-Code location: examples/send_webpush_message.js
+#### 6. Send a message through the WebPush agent.
+Code location: [examples/send_webpush_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_webpush_message.js)
 
-### 7 Send a message through the APNs agent.
-Code location: examples/send_apns_message.js
+#### 7. Send a message through the APNs agent.
+Code location: [examples/send_apns_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_apns_message.js)
 
-### 8 Send a test message.
-Code location: examples/send_test_message.js
+#### 8. Send a test message.
+Code location: [examples/send_test_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_test_message.js)
 
 ## Question or issues
 If you want to evaluate more about HMS Core,
