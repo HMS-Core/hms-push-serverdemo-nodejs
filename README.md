@@ -1,4 +1,5 @@
 # HMS Pushkit Node.js Severdemo
+English | [中文](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/README_ZH.md)
 
 ## Table of Contents
 
