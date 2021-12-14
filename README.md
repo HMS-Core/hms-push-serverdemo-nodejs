@@ -1,132 +1,123 @@
-# HMS Pushkit Node.js Severdemo
-English | [中文](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/README_ZH.md)
+# HMS Core Push Kit Sample Code (Node.js)
+English | [中文](README_ZH.md)
+## Contents
 
-## Table of Contents
+ * [Introduction](#Introduction)
+ * [Installation](#Installation)
+ * [Environment Requirements](#Environment-Requirements)
+ * [Configuration](#Configuration)
+ * [Sample Code](#Sample-Code)
+ * [License](#License)
 
- * [Introduction](#introduction)
- * [Installation](#installation)
- * [Configuration ](#configuration )
- * [Supported Environments](#supported-environments)
- * [Sample Code](#sample-code)
- * [License](#license)
- 
 ## Introduction
 
-Node.js sample code encapsulates APIs of the HUAWEI Push Kit server. It provides many sample programs for your reference or usage.
+The sample code for Node.js encapsulates the server-side APIs of Push Kit, for your reference or direct use.
 
 The following table describes packages of Node.js sample code.
-
-
-| Package | Description
+| Package| Description
 | ---- | ----- 
-| examples|Sample code packages. Each package can run independently to call an API. 
-| utils|Tool package, which contains common network requests and common verification methods. 
-| push|Package where APIs of the HUAWEI Push Kit server are encapsulated. 
+| examples|Sample code packages.
+| utils|Package that provides methods for sending public network requests and for common verification.
+| push|Package where Push Kit server APIs are encapsulated.
 
 ## Installation
 
-Before using Node.js sample code, ensure that the node environment has been installed.
+Install Node.js on your device.
 
-In the nodejs-sdk project directory:
+Run the following command in the **nodejs-sdk** project:
 
 ```bash
 $ npm install
 ```
 
-Run the sample project:
+Run the following command:
 
 ```bash
 $ npm run build
 ```
 
-## Supported Environments
+## Environment Requirements
 
-We support Node.js 8.13.0 and higher.
+Node.js 8.13.0 or later.
 
-Please also note that the Sample Code should only be used in server-side/back-end environments controlled by the app developer.
-This includes most server and serverless platforms (both on-premise and in the cloud). It is not recommended to use the Sample Code in client-side environments.
+Note that the Node.js sample code can be used only in the server-side or background environments that you control, including most servers and serverless platforms (both on-premise and in the cloud).
 
-## Configuration 
+## Configuration
 
-Node.js sample code uses the index.ts file as the entry, creates a HcmNamespace object, calls a method in the object for initialization, enters a method module such as the message or topic method module, and then calls an API of the HUAWEI Push Kit server using a method in the module.
+Start configuration with the **index.ts** file. Create an **HcmNamespace** object, and call the methods in the object to perform initialization. Access different modules, such as the messaging or topic module, and call the methods in each module.
 
-Before using functions provided by packages in examples, you need to set parameters for initialization in config.js.
+To use the functions provided by the packages in **examples**, set initialization and request parameters in the **config.js** file.
 
 
-	
-| Initialization Parameter | Description |
+| Parameter| Description|
 | ---- | ----- |
-| AppId|App ID, which is obtained from app information. |
-| AppSecret|Secret access key of an app, which is obtained from app information. |
-| AuthUrl|URL for the Huawei OAuth 2.0 service to obtain a token, please refer to Generating an App-Level Access Token. |
-| PushUrl|URL for accessing HUAWEI Push Kit, please refer to Sending Messages. |
+| AppId|App ID, which is obtained from the app information.|
+| AppSecret|App secret, which is obtained from the app information.|
+| AuthUrl|URL for Huawei OAuth 2.0 to obtain a token. For details, please refer to [OAuth 2.0-based Authentication](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/oauth2-0000001212610981?ha_source=hms1).|
+| PushUrl|Access address of Push Kit. For details, please refer to [Downlink Message Sending](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-server-dev-0000001050040110?ha_source=hms1).|
 
 
-| Request Parameter | Description |
+| Request Parameter| Description|
 | ---- | ----- |
-| TargetTopic|Name of a topic to be subscribed to, unsubscribed from, or queried. |
-| TargetCondition|Combination of condition expressions for a message. |
-| TargetToken|Token of a destination device. |
-| TargetTokenArray|Tokens of destination devices. |
+| TargetTopic|Name of the topic to be subscribed to, unsubscribed from, or queried.|
+| TargetCondition|Combined condition expression for sending a message.|
+| TargetToken|Token of a target device.|
+| TargetTokenArray|Tokens of all target devices.|
 
 
 ## Sample Code
-Download node.js sample code in Downloading Server Sample Code.
-node.js sample code uses index.ts as the entry. Call methods on object HcmNamespace: messaging and topic.
 
-The following table lists methods in HcmNamespace.
-| Method | Description |
+The **HcmNamespace** object includes the following methods.
+| Method| Description|
 | ---- | ---- |
-| messaging | The entry of the Messaging object, and verify the initialization input parameters. |
-| topic | The entry of the Topic object, and verify the initialization input parameters. |
+| messaging| Verifies the input parameters for initialization.|
+| topic | Verifies the input parameters for initialization.|
+
+The **Messaging** object provides the following methods.
+| Method| Description|
+| ---- | ---- |
+| send | Checks whether the token is updated and calls the **sendRequest** method.|
+| sendRequest | Sends a message to a device.|
+
+The **Topic** object contains the following methods.
+| Method| Description|
+| ---- | ---- |
+| subScribeTopic | Subscribes to a topic.|
+| unSubScribeTopic | Unsubscribes from a topic.|
+| queryTopicList | Queries a topic list.|
+
+1. Send a data message to an Android app.
+File path: **examples/send_data_message.js**
+
+	.	Send a notification message to an Android app.
+File path: **examples/send_notify_message.js**
+
+	.	Send a message by topic.
+File path: **examples/send_topic_message.js**
 	
-The following table lists methods in Messaging.
-| Method | Description |
-| ---- | ---- |
-| send | Verify if the token needs to be updated and call the method sendRequest. |
-| sendRequest | Sends a message to a device. |
+	.	Send a message by condition.
+File path: **examples/send_condition_message.js**
 
-The following table lists methods in Topic.
-| Method | Description |
-| ---- | ---- |
-| subScribeTopic | Subscribe to topic. |
-| unSubScribeTopic | Unsubscribe topic. |
-| queryTopicList | Query subject list. |
+	.	Send a message to a Huawei quick app.
+File path: **examples/send_instance_app_message.js**
 
-#### 1. Send an Android data message.
-Code location: [examples/send_data_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_data_message.js)
+	.	Send a message by WebPush.
+File path: **examples/send_webpush_message.js**
 
-#### 2. Send an Android notification message.
-Code location: [examples/send_notify_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_notify_message.js)
+	.	Send a message by APNs.
+File path: **examples/send_apns_message.js**
 
-#### 3. Send a message by topic.
-Code location: [examples/send_topic_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_topic_message.js)
-	
-#### 4. Send a message by conditions.
-Code location: [examples/send_condition_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_condition_message.js)
+	.	Send a test message.
+File path: **examples/send_test_message.js**
 
-#### 5. Send a message to a Huawei quick app.
-Code location: [examples/send_instance_app_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_instance_app_message.js)
+## Technical Support
+You can visit the [Reddit community](https://www.reddit.com/r/HuaweiDevelopers/) to obtain the latest information about HMS Core and communicate with other developers.
 
-#### 6. Send a message through the WebPush agent.
-Code location: [examples/send_webpush_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_webpush_message.js)
+If you have any questions about the sample code, try the following:
+- Visit [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services?tab=Votes), submit your questions, and tag them with `huawei-mobile-services`. Huawei experts will answer your questions.
+- Visit the HMS Core section in the [HUAWEI Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001?ha_source=hms1) and communicate with other developers.
 
-#### 7. Send a message through the APNs agent.
-Code location: [examples/send_apns_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_apns_message.js)
-
-#### 8. Send a test message.
-Code location: [examples/send_test_message.js](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/blob/master/examples/send_test_message.js)
-
-## Question or issues
-If you want to evaluate more about HMS Core,
-[r/HMSCore on Reddit](https://www.reddit.com/r/HuaweiDevelopers/) is for you to keep up with latest news about HMS Core, and to exchange insights with other developers.
-
-If you have questions about how to use HMS samples, try the following options:
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services) is the best place for any programming questions. Be sure to tag your question with 
-`huawei-mobile-services`.
-- [Huawei Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001) HMS Core Module is great for general questions, or seeking recommendations and opinions.
-
-If you run into a bug in our samples, please submit an [issue](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/issues) to the Repository. Even better you can submit a [Pull Request](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/pulls) with a fix.
+If you encounter any issues when using the sample code, submit your [issues](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/issues) or submit a [pull request](https://github.com/HMS-Core/hms-push-serverdemo-nodejs/pulls).
 
 ## License
-Pushkit Node.js sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
