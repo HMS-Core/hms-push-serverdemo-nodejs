@@ -54,8 +54,8 @@ Node.js示例代码以index.ts文件为入口。创建一个HcmNamespace对象�
 | ---- | ----- |
 | AppId|应用ID，从应用消息中获取 |
 | AppSecret|应用访问密钥，从应用信息中获取|
-| AuthUrl|华为OAuth 2.0获取token的地址。详情请参见 [基于OAuth 2.0开放鉴权-客户端模式](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/oauth2-0000001212610981)。|
-| PushUrl|推送服务的访问地址。详情请参见 [推送服务-下行消息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-server-dev-0000001050040110?ha_source=hms1)。|
+| AuthUrl|华为OAuth 2.0获取token的地址。详情请参见[基于OAuth 2.0开放鉴权-客户端模式](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/oauth2-0000001212610981)。|
+| PushUrl|推送服务的访问地址。详情请参见[推送服务-下行消息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/android-server-dev-0000001050040110?ha_source=hms1)。|
 
 
 | 需求参数 | 说明 |
