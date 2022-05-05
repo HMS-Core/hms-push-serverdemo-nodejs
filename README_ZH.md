@@ -8,6 +8,7 @@
  * [环境要求](#环境要求)
  * [配置](#配置)
  * [示例代码](#示例代码)
+ * [技术支持](#技术支持)
  * [授权许可](#授权许可)
 
 ## 简介
@@ -68,12 +69,14 @@ Node.js示例代码以index.ts文件为入口。创建一个HcmNamespace对象�
 
 ## 示例代码
 
+本示例代码使用index.ts作为入口。调用HcmNamespace对象中的messaging和topic方法。
+
 HcmNamespace包括如下方法：
 | 方法 | 说明 |
 | ---- | ---- |
 | messaging | Messaging对象的入口，用于验证初始化输入的参数 |
 | topic | Topic对象的入口，用于验证初始化输入的参数 |
-
+	
 Messaging包括如下方法：
 | 方法 | 说明 |
 | ---- | ---- |
@@ -87,29 +90,29 @@ Topic包括如下方法：
 | unSubScribeTopic | 退订主题 |
 | queryTopicList | 查询主题列表 |
 
-1.	发送Android透传消息
-文件目录：[examples/send_data_message.js]
+#### 1.	发送Android透传消息
+代码位置: [examples/send_data_message.js](examples/send_data_message.js)
 
-2.	发送Android通知栏消息
-文件目录： [examples/send_notify_message.js]
+#### 2.	发送Android通知栏消息
+代码位置: [examples/send_notify_message.js](examples/send_notify_message.js)
 
-3.	基于主题发送消息
-	文件目录： [examples/send_topic_message.js]
+#### 3.	基于主题发送消息
+代码位置: [examples/send_topic_message.js](examples/send_topic_message.js)
 	
-4.	基于条件发送消息
-文件目录： [examples/send_condition_message.js]
+#### 4.	基于条件发送消息
+代码位置: [examples/send_condition_message.js](examples/send_condition_message.js)
 
-5.	向华为快应用发送消息
-文件目录： [examples/send_instance_app_message.js]
+#### 5.	向华为快应用发送消息
+代码位置: [examples/send_instance_app_message.js](examples/send_instance_app_message.js)
 
-6.	基于WebPush代理发送消息
-文件目录： [examples/send_webpush_message.js]
+#### 6.	基于WebPush代理发送消息
+代码位置: [examples/send_webpush_message.js](examples/send_webpush_message.js)
 
-7.	基于APNs代理发送消息
-文件目录： [examples/send_apns_message.js]
+#### 7.	基于APNs代理发送消息
+代码位置: [examples/send_apns_message.js](examples/send_apns_message.js)
 
-8.	发送测试消息
-文件目录： [examples/send_test_message.js]
+#### 8.	发送测试消息
+代码位置: [examples/send_test_message.js](examples/send_test_message.js)
 
 ## 技术支持
 如果您对HMS Core还处于评估阶段，可在[Reddit社区](https://www.reddit.com/r/HuaweiDevelopers/)获取关于HMS Core的最新讯息，并与其他开发者交流见解。
