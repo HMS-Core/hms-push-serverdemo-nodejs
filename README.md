@@ -68,48 +68,50 @@ To use the functions provided by the packages in **examples**, set initializatio
 
 ## Sample Code
 
-The **HcmNamespace** object includes the following methods.
-| Method| Description|
+node.js sample code uses index.ts as the entry. Call methods on object HcmNamespace: messaging and topic.
+
+The following table lists methods in HcmNamespace.
+| Method | Description |
 | ---- | ---- |
-| messaging| Verifies the input parameters for initialization.|
-| topic | Verifies the input parameters for initialization.|
-
-The **Messaging** object provides the following methods.
-| Method| Description|
-| ---- | ---- |
-| send | Checks whether the token is updated and calls the **sendRequest** method.|
-| sendRequest | Sends a message to a device.|
-
-The **Topic** object contains the following methods.
-| Method| Description|
-| ---- | ---- |
-| subScribeTopic | Subscribes to a topic.|
-| unSubScribeTopic | Unsubscribes from a topic.|
-| queryTopicList | Queries a topic list.|
-
-1. Send a data message to an Android app.
-File path: **examples/send_data_message.js**
-
-	.	Send a notification message to an Android app.
-File path: **examples/send_notify_message.js**
-
-	.	Send a message by topic.
-File path: **examples/send_topic_message.js**
+| messaging | The entry of the Messaging object, and verify the initialization input parameters. |
+| topic | The entry of the Topic object, and verify the initialization input parameters. |
 	
-	.	Send a message by condition.
-File path: **examples/send_condition_message.js**
+The following table lists methods in Messaging.
+| Method | Description |
+| ---- | ---- |
+| send | Verify if the token needs to be updated and call the method sendRequest. |
+| sendRequest | Sends a message to a device. |
 
-	.	Send a message to a Huawei quick app.
-File path: **examples/send_instance_app_message.js**
+The following table lists methods in Topic.
+| Method | Description |
+| ---- | ---- |
+| subScribeTopic | Subscribe to topic. |
+| unSubScribeTopic | Unsubscribe topic. |
+| queryTopicList | Query subject list. |
 
-	.	Send a message by WebPush.
-File path: **examples/send_webpush_message.js**
+#### 1. Send an Android data message.
+Code location: [examples/send_data_message.js](examples/send_data_message.js)
 
-	.	Send a message by APNs.
-File path: **examples/send_apns_message.js**
+#### 2. Send an Android notification message.
+Code location: [examples/send_notify_message.js](examples/send_notify_message.js)
 
-	.	Send a test message.
-File path: **examples/send_test_message.js**
+#### 3. Send a message by topic.
+Code location: [examples/send_topic_message.js](examples/send_topic_message.js)
+	
+#### 4. Send a message by conditions.
+Code location: [examples/send_condition_message.js](examples/send_condition_message.js)
+
+#### 5. Send a message to a Huawei quick app.
+Code location: [examples/send_instance_app_message.js](examples/send_instance_app_message.js)
+
+#### 6. Send a message through the WebPush agent.
+Code location: [examples/send_webpush_message.js](examples/send_webpush_message.js)
+
+#### 7. Send a message through the APNs agent.
+Code location: [examples/send_apns_message.js](examples/send_apns_message.js)
+
+#### 8. Send a test message.
+Code location: [examples/send_test_message.js](examples/send_test_message.js)
 
 ## Technical Support
 You can visit the [Reddit community](https://www.reddit.com/r/HuaweiDevelopers/) to obtain the latest information about HMS Core and communicate with other developers.
