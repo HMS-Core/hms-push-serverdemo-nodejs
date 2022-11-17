@@ -59,7 +59,6 @@ export interface AndroidNotification {
     style: number;
     big_title?: string;
     big_body?: string;
-    big_picture?: string;
     auto_clear?: number;
     notify_id?: number;
     group?: string;
