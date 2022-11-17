@@ -31,7 +31,7 @@ let apns_alert = {
     title:"apnstest",
     body:"body",
     launch_image:"image",
-    custom_data:{"k1": "v1", "k2": "v2"}
+    custom_data:{"key1": "value1", "key2": "value2"}
 }
 let apns_payload_aps = {
     alert:apns_alert,
