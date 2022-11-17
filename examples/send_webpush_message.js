@@ -36,13 +36,13 @@ let notification = {
     actions:[
         {
             action: "123",
-            icon: "https://developer-portalres-drcn.dbankcdn.com/system/modules/org.opencms.portal.template.core/resources/images/icon_Promotion.png",
+            icon: "https://res.vmallres.com/pimages//common/config/logo/SXppnESYv4K11DBxDFc2.png",
             title: "string"
         }
     ],
     badge: "string",
     dir: "auto",
-    icon: "https://developer-portalres-drcn.dbankcdn.com/system/modules/org.opencms.portal.template.core/resources/images/icon_Promotion.png",
+    icon: "https://res.vmallres.com/pimages//common/config/logo/SXppnESYv4K11DBxDFc2.png",
     image: "string",
     lang: "string",
     renotify: true,
