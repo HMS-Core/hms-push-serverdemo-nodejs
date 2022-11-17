@@ -27,13 +27,12 @@ hcm.init({
 let mc = hcm.messaging().messaging;
 
 let notification = {
-    title: "亲爱的，测试个东西",
-    body: "这是body体"
+    title: "test title",
+    body: "test body"
 }
 let androidNotification = {
     icon: 'https://res.vmallres.com/pimages//common/config/logo/SXppnESYv4K11DBxDFc2.png',
     color: '#AACCDD',
-    sound: 'http://att.chinauui.com/day_120606/20120606_7fcf2235b44f1eab0b4dadtAkAGMTBHK.mp3',
     default_sound: true,
     tag: 'tagBoom',
     click_action: {
