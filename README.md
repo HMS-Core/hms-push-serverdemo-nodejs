@@ -17,9 +17,9 @@ The sample code for Node.js encapsulates the server-side APIs of Push Kit, for y
 The following table describes packages of Node.js sample code.
 | Package| Description
 | ---- | ----- 
-| examples|Sample code packages.
-| utils|Package that provides methods for sending public network requests and for common verification.
-| push|Package where Push Kit server APIs are encapsulated.
+| [examples](examples) | Sample code packages.
+| [utils](src/utils) | Package that provides methods for sending public network requests and for common verification.
+| [push](src/push) | Package where Push Kit server APIs are encapsulated.
 
 ## Installation
 
