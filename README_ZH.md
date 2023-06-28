@@ -18,9 +18,9 @@ Node.js示例代码对华为推送服务（HUAWEI Push Kit）服务端接口进�
 示例代码目录结构如下：
 | 包名 | 说明
 | ---- | ----- 
-| examples|示例代码包
-| utils|公共网络请求和公共验证方法包
-| push|接口封装包
+| [examples](examples)|示例代码包
+| [utils](src/utils)|公共网络请求和公共验证方法包
+| [push](src/push)|接口封装包
 
 ## 安装
 
