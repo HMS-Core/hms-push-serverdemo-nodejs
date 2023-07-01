@@ -19,7 +19,7 @@ exports.AppId = "your appid";
 //The application's secretkey, obtained from the application information
 exports.AppSecret = "your AppSecret";
 //Obtain the token interface address from Huawei oauth2.0 service from the application information
-exports.AuthUrl = "https://oauth-login.cloud.huawei.com/oauth2/v2/token";
+exports.AuthUrl = "https://oauth-login.cloud.huawei.com/oauth2/v3/token";
 //Huawei push service access address
 exports.PushUrl = "https://push-api.cloud.huawei.com/v1";
 
