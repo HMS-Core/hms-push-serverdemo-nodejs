@@ -63,7 +63,6 @@ To use the functions provided by the packages in **examples**, set initializatio
 | TargetTopic|Name of the topic to be subscribed to, unsubscribed from, or queried.|
 | TargetCondition|Combined condition expression for sending a message.|
 | TargetToken|Token of a target device.|
-| TargetTokenArray|Tokens of all target devices.|
 
 
 ## Sample Code
