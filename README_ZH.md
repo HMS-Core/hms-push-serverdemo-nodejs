@@ -64,7 +64,6 @@ Node.js示例代码以index.ts文件为入口。创建一个HcmNamespace对象�
 | TargetTopic|订阅、退订或查询的主题名称 |
 | TargetCondition|消息的条件表达式组合|
 | TargetToken|目标设备token |
-| TargetTokenArray|所有目标设备tokens|
 
 
 ## 示例代码
