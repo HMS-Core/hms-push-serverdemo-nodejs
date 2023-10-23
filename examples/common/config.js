@@ -26,7 +26,7 @@ exports.PushUrl = "https://push-api.cloud.huawei.com/v1";
 //TargetToken the topic to be subscribed/unsubscribed
 exports.TargetTopic = "targetTopic";
 //TargetCondition the condition of the devices operated
-exports.TargetCondition = "'targetTopic\' in topics";
+exports.TargetCondition = "'targetTopic' in topics";
 //TargetToken the token of the device operated
 exports.TargetToken = 'pushtoken';
 //WebPushTokenArra the collection of the tokens of th devices operated
